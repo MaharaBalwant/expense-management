@@ -1,0 +1,34 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5><b>Add Expense</b></h5>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="bsModalRef.hide()">×</button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="addExpenseForm">
+    <div class="row" formGroupName="addExpens">
+      <div class="col-md-12 form-group">
+        <label class="control-label">Category </label>
+        <select id="paybu" class="form-control custom-select" formControlName="category">
+          <option value="">Select</option>
+          <option *ngFor="let cat of categoryList" value="{{cat.c_id}}">{{cat.value}}</option>
+        </select>
+      </div>
+      <div class="col-md-12 form-group">
+        <label class="control-label">Item </label>
+        <input type="text" id="item" class="form-control" formControlName="item"/>
+      </div>
+      <div class="col-md-12 form-group">
+        <label class="control-label">Amount </label>
+        <input type="number" id="amount" class="form-control" formControlName="amount"/>
+      </div>
+      <div class="col-md-12 form-group">
+        <label class="control-label">Expiery Date </label>
+        <input type="date" id="edate" class="form-control" formControlName="date"/>
+      </div>
+    </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="onSubmitForm()" >Submit</button>
+  </div>
+</div>

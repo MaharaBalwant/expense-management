@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <app-header></app-header>
+    </div>
+    <div class="col-md-10">
+      
+      <div class="row">
+        <div class="col-md-6">
+          <fieldset style="border: 1px solid black; margin:15px 0px 15px 0px; padding:15px;">
+          <legend>Budget Overview</legend>
+            <div style="float:left;width:50%; margin:10px;">
+
+            </div>
+            <div style="float:right;width:50%; margin:10px;">
+              <span>Total Budget</span><br>
+              <span>Rs. {{totalBudget}}</span>
+              <div class="clear-fix"></div>
+              <span>Total Expenses</span><br>
+              <span>Rs. {{totalExpense}}</span>
+            </div>
+          </fieldset>
+        </div>
+        <div class="col-md-6">
+          <fieldset style="border: 1px solid black; margin: 15px 0px 15px 0px; padding:15px;">
+          <legend>Category Wise Split</legend>
+            <div style="float:left;width:30%; margin:10px;">
+              
+            </div>
+            <div style="float:right;width:60%; margin:10px;">
+              
+            </div>
+          </fieldset>
+        </div>
+        <div class="clear-fix"></div>
+        <div class="col-md-12">
+          <button class="btn btn-success" style="margin: 15px 0px 20px 0px" (click)="addNewExpense()"> Add Expense </button>
+        </div>
+        <div class="clear-fix"></div>
+        <div class="col-md-12">
+          <table class="table table-condensed table-bordered">
+            <thead>
+              <th>S. No.</th>
+              <th>Category</th>
+              <th>Items Name</th>
+              <th>Amount</th>
+              <th>Expense Date</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let exp of explist; let rowIndex = index">
+                <td>{{rowIndex+1}}</td>
+                <td>{{exp.category}}</td>
+                <td>{{exp.item}}</td>
+                <td>{{exp.amount}}</td>
+                <td>{{exp.date}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+          
+    </div>
+  </div>
+</div>

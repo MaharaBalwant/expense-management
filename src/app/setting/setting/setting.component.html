@@ -1,0 +1,57 @@
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-2">
+    <app-header></app-header>
+  </div>
+  <div class="col-md-10">
+    <fieldset style="height:100px;">
+    <legend>Total Budget & Categories Section</legend>
+    <div class="row">
+      <div class="col-md-3">
+        <span>Total Budget</span>
+      </div>
+      <div class="col-md-3">
+        <input type="text" [(ngModel)]="total_budget"/>
+      </div>
+      <div class="col-md-3">
+        <input type="button" value="Update" (click)="updatetotalbudget()"/>
+      </div>
+    </div>
+    </fieldset>
+    <div class="clear-fix"></div>
+    <div class="row">
+      <div class="col-md-3">
+        <span>Categories</span>
+      </div>
+      <div class="col-md-3">
+        <input type="text" [(ngModel)]="categorie_name"/>
+      </div>
+      <div class="col-md-3">
+        <input type="button" value="Add New" (click)="updatecategName()"/>
+      </div>
+    </div>
+    <div class="clear-fix"></div>
+    <div class="row">
+    <fieldset style="height:100px;">
+    <legend>Categories List</legend>
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <th>S.No.</th>
+            <th>Items</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cat of categories; let rowIndex = index">
+              <td>{{rowIndex + 1}}</td>
+              <td>{{cat.value}}</td>
+              <td><button (click)="deleteCatLocal(cat.c_id)">delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </fieldset>
+    </div>
+  </div>
+</div>
+</div>

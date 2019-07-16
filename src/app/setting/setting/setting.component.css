@@ -1,0 +1,51 @@
+.parentDivProfile{
+    display: flex;
+}
+.parentpost2{
+    padding: 1%;
+}
+.chileDivLeft{
+    float: left;
+    height: 100%;
+}
+
+.showpost2{
+    width: 100%;
+}
+
+.chileDivRight{
+    display: table-column;
+    float: right;
+    height: 100%;
+    width: 100%;
+}
+.chileDivRightTxt{
+    padding-left: 3%;
+}
+
+.messageContainer{
+    /*max-width:1400px !important;*/
+    margin-top: 5% !important;
+}
+
+.messageFollowerList{
+    position: fixed;
+}
+.messageViewSec{
+        /* position: static; */
+    /* float: right; */
+    /* width: calc(100% - 491px); */
+    left: 343px;
+    /* height: calc(100% + 50px); */
+    float: left;
+    position: relative;
+}
+.homeNotificateSec{
+        /* position: static; */
+    /* float: right; */
+    /* width: calc(100% - 491px); */
+    left: 343px;
+    /* height: calc(100% + 50px); */
+    float: left;
+    position: relative;
+}

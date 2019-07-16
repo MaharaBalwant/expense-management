@@ -1,0 +1,41 @@
+ul li
+{
+    list-style-type: none;
+    text-align: left;
+}
+
+/* Custom CSS for popup followers */
+.w3-bar-block .w3-bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+}
+
+.w3-container, .w3-panel {
+    padding: 0.01em 16px;
+}
+
+.w3-margin-right {
+    margin-right: 16px!important;
+}
+
+.w3-round, .w3-round-medium {
+    border-radius: 4px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.w3-large {
+    font-size: 18px!important;
+}
+
+.w3-opacity, .w3-hover-opacity:hover {
+    opacity: 0.60;
+}
