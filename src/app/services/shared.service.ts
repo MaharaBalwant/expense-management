@@ -19,28 +19,10 @@ export class SharedService {
     this.searchListService.next(data);
   };
 
-  public matchList = new BehaviorSubject<any>(false);
-  setMatchList(data: any) {
-    this.matchList.next(data);
+  public change_in_data = new BehaviorSubject<any>(false);
+  setChangeInData(data: any) {
+    this.change_in_data.next(data);
   };
 
-  public followerList = new BehaviorSubject<any>(false);
-  setFollowersList(data: any) {
-    this.followerList.next(data);
-  };
-
-  getFollowersList() {
-    return this.followerList.value;
-  };
-
-  public messageClickId = new BehaviorSubject<any>(false);
-  setMessageClickId(data: any) {
-    this.messageClickId.next(data);
-  };
-
-  public seekerID = new BehaviorSubject<any>(false);
-  setSeekerLoggedID(data: any) {
-    this.seekerID.next(data);
-  };
 
 }

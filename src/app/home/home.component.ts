@@ -2,6 +2,7 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { BsModalService } from 'ngx-bootstrap';
 import { AddexpenseComponent } from './addexpense/addexpense.component';
+import { SharedService } from './../services/shared.service';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private bsModalService: BsModalService,
+	private sharedService : SharedService
   ) { }
 
   ngOnInit() {
