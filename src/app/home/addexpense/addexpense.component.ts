@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap';
+//import { HomeComponent } from './../home.component';
 
 @Component({
   selector: 'app-addexpense',
@@ -16,6 +17,7 @@ export class AddexpenseComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     public bsModalRef: BsModalRef,
+    //private homeComp: HomeComponent
   ) 
   {}
 
@@ -73,6 +75,7 @@ export class AddexpenseComponent implements OnInit {
       localStorage.setItem('expenses',JSON.stringify(dummArr));
     }
     this.bsModalRef.hide();
+    //this.homeComp.ngOnInit();
   }
 
 }

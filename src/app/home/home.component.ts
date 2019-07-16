@@ -23,7 +23,9 @@ export class HomeComponent implements OnInit {
     this.totalBudget = localStorage.getItem('total_budget');
     this.explist = JSON.parse(localStorage.getItem('expenses'));
     console.log(this.explist);
-    this.totalExpense = this.getTotalExpense(this.explist);
+    if(this.explist){
+      this.totalExpense = this.getTotalExpense(this.explist);
+    }
   }
 
   getTotalExpense(expenseArr){
